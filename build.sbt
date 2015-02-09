@@ -14,3 +14,5 @@ includeFilter in (Assets, LessKeys.less) := "*.less"
 LessKeys.compress := true
 
 TwirlKeys.templateImports ++= Seq("views._")
+
+herokuAppName in Compile := "ここにherokuのアプリケーションのID記述"
