@@ -15,3 +15,12 @@ server.pid
 *.eml
 /dist/
 .cache
+
+# Config
+conf/application.conf
+
+# IDEA
+.idea/
+
+# Emacs
+*~

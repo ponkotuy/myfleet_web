@@ -1,0 +1,27 @@
+@(active: String)
+<link rel="stylesheet" href="@Css.BootstrapSwitch" />
+<script src="@Js.BootstrapSwitch"></script>
+<div style="margin-top: 0px; margin-bottom: 10px;">
+  <div class="container">
+    <div class="header">
+      <button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"></button>
+      <a class="navbar-brand" href="//myfleet.moe"><img src="@routes.Assets.at("MFGsTitle.png")" width="106px" height="51px" alt="MyFleetGirls" style="margin-top: -10px; margin-left: -10px; margin-right: 20px;"/></a>
+    </div>
+    <div>
+      <ul class="nav nav-pills" style="margin-top: 10px">
+        <li class="@if(active == "top") {active}">
+          <a href="@URL.Index">Top</a>
+        </li>
+        <li class="@if(active == "statistics") {active}">
+          <a href="@URL.Statistics">Statistics</a>
+        </li>
+        <li class="@if(active == "about") {active}">
+          <a href="@routes.ViewAbout.setup()">About</a>
+        </li>
+        <li class="@if(active == "login") {active}" style="margin-left: 80px">
+          <a href="@URL.Login" id="loginA">Login/Logout</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>

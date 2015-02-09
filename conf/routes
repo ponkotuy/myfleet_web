@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# View
+GET     /entire/about               controllers.ViewAbout.setup
+GET     /entire/about/change        controllers.ViewAbout.changeLog
+GET     /entire/about/faq           controllers.ViewAbout.faq
+GET     /entire/about/setup_detail  controllers.ViewAbout.setupDetail
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
