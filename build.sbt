@@ -15,4 +15,4 @@ LessKeys.compress := true
 
 TwirlKeys.templateImports ++= Seq("views._")
 
-herokuAppName in Compile := "ここにherokuのアプリケーションのID記述"
+herokuAppName in Compile := "myfleet-web"
