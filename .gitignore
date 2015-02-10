@@ -16,11 +16,11 @@ server.pid
 /dist/
 .cache
 
-# Config
-conf/application.conf
-
 # IDEA
 .idea/
 
 # Emacs
 *~
+
+# Heroku Config
+.env
