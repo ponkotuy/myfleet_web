@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/myfleetgirlsweb
+web: target/universal/stage/bin/myfleetgirlsweb -Dhttp.port=$PORT
