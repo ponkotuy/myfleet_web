@@ -12,4 +12,5 @@ object URL {
   val Statistics = s"${Entire}/activities"
   val Login = s"${Entire}/login"
   val Favicon = s"${Host}/favicon.ico"
+  val Assets = s"${Host}/assets"
 }
