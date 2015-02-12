@@ -11,4 +11,5 @@ object URL {
   val Entire = s"${Host}/entire"
   val Statistics = s"${Entire}/activities"
   val Login = s"${Entire}/login"
+  val Favicon = s"${Host}/favicon.ico"
 }

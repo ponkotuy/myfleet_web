@@ -3,6 +3,7 @@
 # ~~~~
 
 # View
+GET     /favicon.ico                controllers.Other.favicon
 GET     /entire/about               controllers.ViewAbout.setup
 GET     /entire/about/change        controllers.ViewAbout.changeLog
 GET     /entire/about/faq           controllers.ViewAbout.faq
