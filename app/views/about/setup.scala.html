@@ -15,10 +15,10 @@
     <h2>インストール・使い方</h2>
     <ol>
       <li>Java7（JRE7）以降がインストールされてない場合はする <a href="http://java.com/ja/download/">JavaDownload</a></li>
-      <li><a href="@routes.Assets.at("zip/MyFleetGirls.zip")">DownloaderのDownload</a></li>
+      <li><a href="@routes.Other.redirectAssets("zip/MyFleetGirls.zip")">DownloaderのDownload</a></li>
       <li>ZIPファイルを解凍</li>
       <li>Windowsの場合はMyFleetGirls.bat、Linuxの場合はMyFleetGirls.sh、Macの場合はMyFleetGirls.commandを起動する</li>
-      <li>PACファイルを使ってブラウザのProxy設定をする。<a href="@routes.Assets.at("proxy.pac")">http://myfleet.moe/assets/proxy.pac</a>をブラウザにセット（PACファイルの設定方法はGoogle先生からどうぞ）</li>
+      <li>PACファイルを使ってブラウザのProxy設定をする。<a href="@routes.Other.redirectAssets("proxy.pac")">http://myfleet.moe/assets/proxy.pac</a>をブラウザにセット（PACファイルの設定方法はGoogle先生からどうぞ）</li>
       <li>設定したブラウザで艦これのFlashを起動する</li>
       <li>しばらくゲームが進んだ後に<a href="@URL.Index">@URL.Index</a>にアクセスすると閲覧できるようになっている</li>
     </ol>
