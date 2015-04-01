@@ -9,6 +9,7 @@ GET     /entire/about               controllers.ViewAbout.setup
 GET     /entire/about/change        controllers.ViewAbout.changeLog
 GET     /entire/about/faq           controllers.ViewAbout.faq
 GET     /entire/about/setup_detail  controllers.ViewAbout.setupDetail
+GET     /entire/about/author        controllers.ViewAbout.author
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /redirect/assets/*path      controllers.Other.redirectAssets(path)

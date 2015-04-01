@@ -11,5 +11,6 @@ object ViewAbout extends Controller {
   def setup = Common.actionAsync { Ok(views.html.about.setup()) }
   def changeLog = Common.actionAsync { Ok(views.html.about.change_log()) }
   def faq = Common.actionAsync { Ok(views.html.about.faq()) }
-  def setupDetail = Common.actionAsync { Ok(views.html.about.setup_detail())}
+  def setupDetail = Common.actionAsync { Ok(views.html.about.setup_detail()) }
+  def author = Common.actionAsync { Ok(views.html.about.author()) }
 }
