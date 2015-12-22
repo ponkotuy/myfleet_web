@@ -10,7 +10,7 @@ object URL {
   def Index = Host
   val Entire = s"${Host}/entire"
   val Statistics = s"${Entire}/activities"
-  val Login = s"${Entire}/login"
+  val Login = s"${Host}/passwd/entire/login"
   val Favicon = s"${Host}/favicon.ico"
   val Assets = s"${Host}/assets"
 }
