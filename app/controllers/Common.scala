@@ -1,8 +1,8 @@
 package controllers
 
 import play.api.mvc._
-import play.api.libs.concurrent.Execution.Implicits._
-import scala.concurrent.Future
+
+import scala.concurrent.{ExecutionContext, Future}
 
 /**
  *
@@ -19,9 +19,9 @@ object Common extends Controller {
     } yield one
   }
 
-  def returnString[A](f: => A) = actionAsync { Ok(f.toString) }
+  def returnString[A](f: => A)(implicit ec: ExecutionContext) = actionAsync { Ok(f.toString) }
 
-  def actionAsync(f: => Result) = Action.async { request =>
+  def actionAsync(f: => Result)(implicit ec: ExecutionContext) = Action.async { request =>
     Future {
       try {
         f
@@ -31,7 +31,7 @@ object Common extends Controller {
     }
   }
 
-  def actionAsync(f: (Request[AnyContent]) => Result) = Action.async { request =>
+  def actionAsync(f: (Request[AnyContent]) => Result)(implicit ec: ExecutionContext)  = Action.async { request =>
     Future {
       try {
         f(request)
@@ -41,7 +41,7 @@ object Common extends Controller {
     }
   }
 
-  def formAsync(f: Request[Map[String, Seq[String]]] => Result) = Action.async(parse.urlFormEncoded) { request =>
+  def formAsync(f: Request[Map[String, Seq[String]]] => Result)(implicit ec: ExecutionContext)  = Action.async(parse.urlFormEncoded) { request =>
     Future {
       try {
         f(request)
